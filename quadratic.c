@@ -20,14 +20,15 @@ int main(void)
             dec = 1;
             while (index != -1)
             {
-                number_a += string[index] * dec;
+                int add = string[index] - '0';
+                number_a += add * dec;
                 index--;
+                dec *= 10;
             }
         }
         i++;
     }
 
-    printf("%d\n", number_a);
 
     return 0;
 }
